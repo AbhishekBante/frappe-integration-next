@@ -1,0 +1,16 @@
+
+CREATE TABLE portal_sessions (
+  ID varchar(50) NOT NULL,
+  NAME varchar(255) NOT NULL DEFAULT '',
+  EMAIL varchar(70) NOT NULL,
+  SSO_TYPE varchar(12) not null,
+  SSO_RESPONSE json not null,
+  IP varchar(20) NOT NULL,
+  LOCATION json DEFAULT NULL,
+  USER_AGENT varchar(150) DEFAULT NULL,
+  USER_AGENT_DETAILS json DEFAULT NULL,
+  ROLE varchar(15) DEFAULT NULL,
+  CRTIME timestamp(0) NULL DEFAULT NULL,
+  LASTTIME timestamp(0) NULL DEFAULT NULL,
+  PRIMARY KEY (ID)
+) ;
